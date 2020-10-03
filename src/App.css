@@ -12,3 +12,11 @@ body {
   height: 60px; /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
 }
+
+.sell-form{
+  text-align: center;
+  width: 400px;
+  background-color: rgba(0,0,0, .7);
+  padding: 20px;
+  color: white;
+}

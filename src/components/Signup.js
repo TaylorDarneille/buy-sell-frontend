@@ -5,7 +5,9 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Signup = () => {
     let [name, setName] = useState('');
-    let [email, setEmail] = useState('')
+    let [location, setLocation] = useState('');
+    let [phone, setPhone] = useState('');
+    let [email, setEmail] = useState('');
     let [password, setPassword] = useState('');
     let [confirmPassword, setConfirmPassword] = useState('');
     let [redirect, setRedirect] = useState(false);
@@ -16,6 +18,12 @@ const Signup = () => {
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
+    }
+    const handleLocation = (e) => {
+        setLocation(e.target.value);
+    }
+    const handlePhone = (e) => {
+        setPhone(e.target.value);
     }
 
     const handlePassword = (e) => {
@@ -30,7 +38,7 @@ const Signup = () => {
         e.preventDefault();
 
         if (password === confirmPassword) {
-            const newUser = { name, email, password }
+            const newUser = { name, location, phone, email, password }
 
             axios.post(`${REACT_APP_SERVER_URL}/api/users/register`, newUser)
             .then(response => {
@@ -52,6 +60,14 @@ const Signup = () => {
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input type="text" name="name" value={name} onChange={handleName} className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="location">Location</label>
+                            <input type="text" name="location" value={location} onChange={handleLocation} className="form-control"/>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone">Phone number</label>
+                            <input type="text" name="phone" value={phone} onChange={handlePhone} className="form-control"/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
