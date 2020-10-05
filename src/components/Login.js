@@ -40,17 +40,19 @@ const Login = (props) => {
     if (props.user) return <Redirect to="/profile" user={props.user} />;
 
     return (
-        <div className="row mt-4">
+        <div className="sell-form">
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
                     <h2 className="py-2">Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
+                            <br></br>
                             <input type="text" name="email" value={email} onChange={handleEmail} className="form-control" required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
+                            <br></br>
                             <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" required />
                         </div>
                         <button type="submit" className="btn btn-primary float-right">Submit</button>

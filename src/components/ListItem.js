@@ -136,7 +136,7 @@ const ListItem = (props) => {
                         <label htmlFor="category" name="category">Tools</label>
                         <input type="radio" name="category" value="tools" onClick={handleCategory} />
                         <label htmlFor="category" name="category">Other</label>
-                        <input type="radio" name="category" value="other" onClick={handleCategory} />
+                        <input type="radio" name="category" value="others" onClick={handleCategory} />
                     </div>
                         <input type="hidden" name="seller" value={props.user.id} />
                     <button type="submit">List</button>

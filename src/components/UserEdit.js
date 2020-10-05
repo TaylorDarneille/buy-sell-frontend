@@ -36,16 +36,18 @@ const EditForm = (props) => {
 
     
         return(
-            <div className='edit-user'>
+            <div className='sell-form'>
                 <h3>Edit your account</h3>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="Location">Location:</label>
-                        <input name="Location" value={loc} onChange={handleLocation} required/>
+                        <br></br>
+                        <input name="Location" value={loc} onChange={handleLocation} placeholder="City, State" required/>
                     </div>
                     <div>
                         <label htmlFor="Phone">Phone:</label>
-                        <input name="Phone" value={phone} onChange={handlePhone} required/>
+                        <br></br>
+                        <input name="Phone" value={phone} onChange={handlePhone} placeholder="Phone Number" required/>
                     </div>
                         <input type="hidden" name="id" value={props.user.id} />
                     <button type="submit">Update</button>
