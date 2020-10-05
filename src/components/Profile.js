@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import UserEdit from './UserEdit';
 // import ListItem from './ListItem';
-import axios from 'axios';
-const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Profile = (props) => {
-    console.log(props);
+    console.log("props", props.user);
 
-    let [currentForm, setForm] = useState('Edit User');
-	let [user, setUser] = useState('');
-	let [userId, setUserId] = useState('');
+    // let [currentForm, setForm] = useState('Edit User');
+	// let [user, setUser] = useState('');
+	// let [userId, setUserId] = useState('');
 
     const userData = props.user ? 
     (<div>
@@ -19,9 +17,6 @@ const Profile = (props) => {
         <p><strong>Email:</strong> {props.user.email}</p> 
         <p><strong>Location:</strong> {props.user.location}</p> 
         <p><strong>Phone Number:</strong> {props.user.phone}</p>
-        {/* <div>
-            <a href="/list">List an item</a>
-        </div>  */}
     </div>) : (
         <h4>Loading...</h4>
     );

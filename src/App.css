@@ -20,3 +20,13 @@ body {
   padding: 20px;
   color: white;
 }
+
+.image-form {
+  /* display: inline; */
+  text-align: center;
+  
+}
+
+/* .radio-form {
+  float: right;
+} */
