@@ -81,6 +81,7 @@ const ListItem = (props) => {
                     <div className="cloudinary-form">
                         <h1>Upload Image</h1>
                         <input 
+                            className="image-input"
                             type="file" 
                             name="file" 
                             placeholder="upload an image"

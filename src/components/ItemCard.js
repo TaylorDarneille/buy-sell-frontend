@@ -33,7 +33,7 @@ const ItemCard = ({listing, showLink}) => {
                     // style={{height: 0}}
                     className={classes.media}
                     image={listing.image}
-                    title="Contemplative Reptile"
+                    title={listing.title}
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">

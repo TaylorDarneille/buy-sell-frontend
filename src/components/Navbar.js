@@ -244,7 +244,7 @@ const Navbar = (props) => {
             <Typography className={classes.title} variant="h6" noWrap>
                 Buy My Bullshit
             </Typography>
-            <div className={classes.search}>
+            {/* <div className={classes.search}>
                 <div className={classes.searchIcon}>
                 <SearchIcon />
                 </div>
@@ -256,7 +256,7 @@ const Navbar = (props) => {
                 }}
                 inputProps={{ 'aria-label': 'search' }}
                 />
-            </div>
+            </div> */}
             </Toolbar>
         </AppBar>
         <Drawer
