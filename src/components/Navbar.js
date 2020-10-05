@@ -21,8 +21,6 @@ import AccountBoxRoundedIcon from '@material-ui/icons/AccountBoxRounded';
 import HouseRoundedIcon from '@material-ui/icons/HouseRounded';
 import LiveHelpRoundedIcon from '@material-ui/icons/LiveHelpRounded';
 import DoubleArrowRoundedIcon from '@material-ui/icons/DoubleArrowRounded';
-import SearchIcon from '@material-ui/icons/Search';
-import InputBase from '@material-ui/core/InputBase';
 const drawerWidth = 300;
 const useStyles = makeStyles((theme) => ({
     root: {

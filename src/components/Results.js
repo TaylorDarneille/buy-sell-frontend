@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ItemCard from './ItemCard';
-import {Grid} from '@material-ui/core';
-import {Container} from '@material-ui/core';
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Results = (props) => {
