@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Results from './components/Results';
 import ListItem from './components/ListItem';
 import ListId from './components/ListId';
+import UserListings from './components/UserListings';
 // import Details from './components/Details';
 // import Cloudinary from './components/Cloudinary';
 import './App.css';
@@ -37,6 +38,8 @@ function App() {
   let [resultsData, setResultsData] = useState({});
   let [resultData, setResultData] = useState({});
 
+
+
   useEffect(() => {
     let token;
     if (!localStorage.getItem('jwtToken')) {
@@ -52,6 +55,7 @@ function App() {
   const handleResultsData = setResultsData
 
   const handleResultData = setResultData
+
 
   const nowCurrentUser = (userData) => {
     console.log('nowCurrentUser is working...');
@@ -99,6 +103,8 @@ function App() {
           
           {currentUser ?
           <>  
+            <Route path='/userlistings' component={ UserListings } user={currentUser} />
+            
             <Route path="/results/all" component={ Results } handleResultsData={handleResultsData} user={currentUser} category={cat}/>
             <PrivateRoute 
               path="/results/clothing"

@@ -1,14 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UserEdit from './UserEdit';
-// import ListItem from './ListItem';
+import UserListings from './UserListings';
 
 const Profile = (props) => {
     console.log("props", props.user);
-
-    // let [currentForm, setForm] = useState('Edit User');
-	// let [user, setUser] = useState('');
-	// let [userId, setUserId] = useState('');
 
     const userData = props.user ? 
     (<div>
@@ -29,30 +25,12 @@ const Profile = (props) => {
         );
     };
 
-
-    // const getUserData = async () => {
-	// 	// console.log(props.user.id);
-	// 	try {
-	// 		const res = await axios.post(
-	// 			`${REACT_APP_SERVER_URL}/api/users/profile/get`,
-	// 			{ _id: props.user.id }
-	// 		);
-	// 		setUser(res.data);
-	// 	} catch (e) {
-	// 		console.log(e);
-	// 	}
-	// };
-
-	// useEffect(() => {
-	// 	getUserData();
-	// }, [props.user.id]);
-
-    
     return (
         <div>
             { props.user ? userData : errorDiv() }
             <div>
             <UserEdit user={props.user} />
+            <UserListings user={props.user} />
             </div>
         </div>
     ); 

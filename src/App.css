@@ -27,6 +27,29 @@ body {
   
 }
 
-/* .radio-form {
-  float: right;
-} */
+.pageTitle{
+  text-align: center;
+
+}
+
+.listing-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  align-items: end;
+  justify-content: space-evenly; 
+  margin: 10% 10%;
+  margin-bottom: 20%;
+
+}
+
+.list-id{
+  margin: 10% 35%;
+  text-align: center;
+  min-width: 200px;
+}
+.float-list-id{
+  margin: 10% auto;
+  text-align: center;
+  float: center;
+}
